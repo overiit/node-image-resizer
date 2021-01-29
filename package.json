@@ -1,0 +1,31 @@
+{
+  "name": "node-image-resizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ./build/index.js --name node-image-resizer",
+    "stop": "pm2 stop node-image-resizer",
+    "dev": "nodemon index.ts",
+    "build": "tsc --project ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gifsicle-stream": "^1.0.0",
+    "libvips": "0.0.2",
+    "request": "^2.88.2",
+    "sharp": "^0.27.1",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/request": "^2.48.5",
+    "@types/sharp": "^0.27.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
