@@ -7,6 +7,8 @@ var Gifsicle = require("gifsicle-stream");
 export const resize = async (url: string, size: number, res: any) => {
   // Fetch Image
   var responseStream = request.get(url);
+  if (size > 1000) size = 1000;
+  if (size < 50) size = 50;
 
   // Format response stream to buffer array
   var buffers: Buffer[] = [];
